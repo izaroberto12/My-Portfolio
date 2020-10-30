@@ -1,0 +1,193 @@
+/* Header */
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #202020;
+}
+.container{
+    display: inline-block;
+    width: 98%;
+    padding: 10px;
+    margin: auto;
+}
+.logo{
+    height: 53px;
+    width: 226px;
+    padding: 10px 25px 10px 25px;
+    display: inline-block;
+}
+nav {
+    float: right;
+}
+.headerList{
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px 25px 10px 25px;
+    color: white;
+}
+/* style for hero section */
+.about{
+    position: relative;
+}
+.heroImg {
+    height: 700px;
+    width: 600px;
+    padding-left: 200px;
+}
+.imageOverlay{
+    background-color: black;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 500px;
+    width: 300px;
+    z-index: 1;
+}
+.heroText {
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    right: 5%;
+    text-align: center;
+    z-index: 2;
+}
+.aboutMe{
+    padding-left: 45px;
+}
+.socialIcons{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+.socialMedia{
+    padding-top: 30px;
+}
+/* Section Break */
+.seperator{
+    border: 1px solid #b5b5b5;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-bottom: 50px;
+}
+
+/*  Case Studies */
+.caseStudies{
+    color: white;
+}
+.caseStudyContainer{
+    height: 550px;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    border: 5px solid #202020;
+}
+.caseStudyButton{
+    position: absolute;
+    top: 475px;
+    left: 25%;
+    padding: 15px;
+    text-decoration: none;
+    border: 2px solid white;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+.caseSummary{
+    position: absolute;
+    top: 180px;
+    left: 300Px;
+    width: 500px;
+    text-align: center;
+    z-index: 2;
+    font-size: 16pt;
+}
+/* Case Study 1 */
+.projectRowhouseImg{
+    height: 1500px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+#cs1Overlay{
+    position: absolute;
+    top: 0;
+    height: 1500px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+.prhLogo{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: none;
+    z-index: 2;
+}
+.prhWebPage{
+    position: absolute;
+    top: 45px;
+    right: 4%;
+    background-color: none;
+    z-index: 2;
+}
+#prhSummary{
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+#button1:hover{
+    background-color: #1DA1C4;    
+    border: 0px;
+}
+/*Case Study 2  */
+.verdeImg{
+    position: absolute;
+    top: -200px;
+    height: 1600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.verdeLogo{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: none;
+    z-index: 2;
+}
+.verdeMobile{
+    position: absolute;
+    top: 2px;
+    right: 18%;
+    background-color: none;
+    z-index: 2;
+}
+#verdeSummary{
+    color: #10351D;
+    letter-spacing: 1px;
+}
+#button2:hover{
+    background-color:#10351D;
+    border: 0px;
+}
+/* Case Study 3 */
+.case3Img{
+    position: absolute;
+    top: -200px;
+    height: 1600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+#button3:hover{
+    background-color: rgb(3, 138, 184);
+    border: 0px;
+}
+/* Contact */
