@@ -73,7 +73,11 @@ nav {
     margin-left: 25%;
     margin-bottom: 50px;
 }
-
+h1{
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
 /*  Case Studies */
 .caseStudies{
     color: white;
@@ -84,12 +88,13 @@ nav {
     margin-top: 20px;
     position: relative;
     border: 5px solid #202020;
+    /* padding: 20px 50px 20px 50px; */
 }
 .caseStudyButton{
     position: absolute;
     top: 475px;
     left: 25%;
-    padding: 15px;
+    padding: 15px ;
     text-decoration: none;
     border: 2px solid white;
     text-align: center;
@@ -191,3 +196,37 @@ nav {
     border: 0px;
 }
 /* Contact */
+.contacts{
+    color: white;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+#contactInfo1{
+    cursor: pointer;
+}
+h2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+}
+ul{
+    list-style-type: none;
+}
+.contactButton{
+    position: absolute;
+    text-decoration: none;
+    border: 2px solid white;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
