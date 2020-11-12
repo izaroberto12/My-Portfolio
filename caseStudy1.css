@@ -42,5 +42,8 @@ nav {
     align-items: center;
     border: 12px;
 }
-
+#heroPrhLogo{
+    position: absolute;
+    float: left;
+}
 /* Header Ends */
