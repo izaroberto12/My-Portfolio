@@ -25,7 +25,9 @@ nav {
     padding: 10px 25px 10px 25px;
     color: white;
 }
-/* style for hero section */
+/* Header Ends */
+
+/* Hero Section */
 .about{
     position: relative;
 }
@@ -65,6 +67,8 @@ nav {
 .socialMedia{
     padding-top: 30px;
 }
+/* Hero Section Ends */
+
 /* Section Break */
 .seperator{
     border: 1px solid #b5b5b5;
@@ -80,6 +84,8 @@ h1{
     justify-content: center;
     text-align: center;
 }
+/* Section Break Ends*/
+
 /*  Case Studies */
 .caseStudies{
     color: white;
@@ -153,6 +159,8 @@ h1{
     background-color: #1DA1C4;    
     border: 0px;
 }
+/* Case Study 1 Ends */
+
 /*Case Study 2  */
 .verdeImg{
     position: absolute;
@@ -184,6 +192,8 @@ h1{
     background-color:#10351D;
     border: 0px;
 }
+/*Case Study 2 Ends */
+
 /* Case Study 3 */
 .case3Img{
     position: absolute;
@@ -197,6 +207,8 @@ h1{
     background-color: rgb(3, 138, 184);
     border: 0px;
 }
+/* Case Study 3 Ends */
+
 /* Contact */
 .contacts{
     display: grid;
@@ -245,3 +257,4 @@ h2{
     background-color:#1DA1C4;
     border: 0px;
 }
+/* Contact Ends*/

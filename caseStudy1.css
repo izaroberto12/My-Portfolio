@@ -1,0 +1,46 @@
+/* Header Start */
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #202020;
+}
+.container{
+    display: inline-block;
+    width: 98%;
+    padding: 10px;
+    margin: auto;
+}
+.logo{
+    height: 53px;
+    width: 226px;
+    padding: 10px 25px 10px 25px;
+    display: inline-block;
+}
+nav {
+    float: right;
+}
+.headerList{
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px 25px 10px 25px;
+    color: white;
+}
+.heroSection{
+    color: white;
+}
+.summarySection{
+    position: relative;
+    display: grid;
+    
+}
+#heroImg, #heroPrhLogo, #summary, #goals, #responbilities{
+    position: absolute;
+} 
+#heroImg{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 12px;
+}
+
+/* Header Ends */
