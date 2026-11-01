@@ -1,0 +1,157 @@
+/* HOMEPAGE 2026 / TYPOGRAPHY AND LAYOUT
+   Primary: Adobe Fonts Superpop Variable (requires owner's Web Project embed).
+   The exact kit CSS family name must be confirmed in Adobe's Web Project.
+   Until connected, Space Grotesk displays as the primary fallback.
+   Secondary: Space Grotesk. Tertiary: Roboto.
+   All overrides are scoped to .home-editorial: case studies are untouched. */
+.home-editorial {
+  --h-blue: #2563eb;
+  --h-purple: #7545d8;
+  --h-dark: #0b1832;
+  --h-text: #1c2840;
+  --h-muted: #526079;
+  --h-line: #d9dfeb;
+  --h-surface: #f8f9fc;
+  --h-primary: "superpop-variable", "superpop", "Space Grotesk", sans-serif;
+  --h-secondary: "Space Grotesk", sans-serif;
+  --h-tertiary: "Roboto", Arial, sans-serif;
+  background: var(--h-surface);
+  color: var(--h-text);
+  font-family: var(--h-tertiary);
+  line-height: 1.65;
+}
+.home-editorial :is(p, li, a, button, small, figcaption, summary) { font-family: var(--h-tertiary); }
+.home-editorial :is(.ed-kicker, .eyebrow, .ed-project-count) {font-family:var(--h-tertiary);font-weight:700;letter-spacing:.115em}
+.home-editorial :is(h2, h3, .ed-display, .ed-project-copy h3, .ed-home-work-head h2, .experience-section h2, .strengths-section h2, .about-section h2) {
+  font-family: var(--h-secondary)!important;
+  letter-spacing:-.045em!important;
+  line-height:1.09!important;
+}
+.home-editorial .script,
+.home-editorial .logo,
+.home-editorial .about-mark {font-family:var(--h-secondary)!important;letter-spacing:-.04em}
+.home-editorial .logo{font-weight:700;font-size:29px}
+.home-editorial .site-header{background:#fff;border-bottom:1px solid var(--h-line)}
+.home-editorial .nav-links {gap:25px}
+.home-editorial .nav-links a{font-size:13px;font-weight:600}
+.home-editorial .nav-contact {background:var(--h-purple);color:#fff}
+.home-editorial .ed-wrap{width:min(1160px,calc(100% - 50px))}
+.home-editorial .ed-cta {background:var(--h-blue)}
+.home-editorial .ed-cta:hover {background:#164dc4}
+.home-editorial .ed-outline {font-weight:700}
+.home-editorial :is(a,button,summary):focus-visible {outline:3px solid var(--h-purple);outline-offset:4px}
+
+/* One hero. One point. Actual project image instead of decorative sticker art. */
+.home-editorial .home-hero{
+  background:radial-gradient(circle at 95% 10%,#5d40ba36,transparent 38%),linear-gradient(125deg,#0b1832,#152957 80%);
+  color:#fff;
+  padding:86px 0 94px;
+}
+.home-hero-inner{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);align-items:center;gap:clamp(34px,5vw,72px)}
+.home-hero .home-eyebrow{color:#b8c8fb;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.home-hero .home-eyebrow .home-dot{width:8px;height:8px;border-radius:50%;background:#bdadff}
+.home-hero h1{margin:17px 0 25px;font-weight:700;line-height:.99;letter-spacing:-.065em;font-size:clamp(56px,7vw,99px);overflow-wrap:normal}
+.home-hero .home-name{display:block;font-family:var(--h-primary);font-weight:700;letter-spacing:-.055em;line-height:.98}
+.home-hero .home-name:last-of-type{color:#bdb0ff}
+.home-hero .home-subtitle{max-width:620px;font:600 clamp(23px,2.8vw,34px)/1.22 var(--h-secondary);letter-spacing:-.04em;margin:0 0 20px;color:#fbfbff}
+.home-hero .home-summary{color:#d3def3;font-size:16px;line-height:1.8;max-width:550px}
+.home-hero .home-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.home-hero .ed-outline{color:#fff;border-color:#8d9dbc}
+.home-hero .ed-outline:hover{background:#ffffff15}
+.home-hero-visual{margin:0;position:relative;min-width:0}
+.home-hero-photo{
+  background:#223759;border:1px solid #7282a3;display:grid;place-items:center;padding:18px;
+  aspect-ratio:4/5;overflow:hidden;
+}
+.home-hero-photo img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;display:block}
+.home-hero-visual figcaption{margin-top:12px;color:#bdcbe7;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.home-hero-visual figcaption strong{color:#e0dbff}
+.home-hero .home-note{color:#a7b8dc;font-size:12px;max-width:530px;margin-top:22px}
+
+/* Selected work: one featured project, two clear case-study cards. */
+.home-editorial .work-section{background:var(--h-surface)!important;padding:95px 0 110px!important}
+.home-work-heading{display:flex;justify-content:space-between;align-items:end;gap:35px;border-bottom:1px solid var(--h-line);padding-bottom:28px;margin-bottom:34px}
+.home-work-heading h2{font-size:clamp(44px,5.4vw,76px);margin:12px 0 0}
+.home-work-heading p{max-width:360px;color:var(--h-muted);font-size:15px;line-height:1.75}
+.home-work-feature{
+  background:#fff;border:1px solid var(--h-line);display:grid;grid-template-columns:1.2fr 1fr;
+  min-height:380px;overflow:hidden;
+}
+.home-work-feature .home-work-picture{background:#18283f;display:grid;place-items:center;min-height:320px}
+.home-work-feature .home-work-picture img{width:100%;height:100%;max-height:450px;object-fit:contain;display:block}
+.home-work-copy{padding:35px 38px;display:flex;flex-direction:column;justify-content:center;align-items:start;gap:15px}
+.home-work-copy .ed-kicker{color:#5d62a8}
+.home-work-copy h3{font-size:clamp(32px,3.35vw,48px);margin:0}
+.home-work-copy p{color:var(--h-muted);font-size:15px;line-height:1.75;max-width:490px}
+.home-work-link{display:inline-block;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;font-weight:700;font-size:13px;margin-top:4px}
+.home-work-link:hover{color:var(--h-purple)}
+.home-work-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
+.home-work-pair .home-work-card{background:#fff;border:1px solid var(--h-line);min-width:0;overflow:hidden}
+.home-work-pair .home-work-picture{display:flex;align-items:center;justify-content:center;background:#e4e0f2;aspect-ratio:16/10;padding:23px;overflow:hidden}
+.home-work-pair .home-work-picture img{max-height:100%;height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
+.home-work-pair .home-prh-photo{background:#eee5d7}
+.home-work-pair .home-verde-photo{background:#dce9dc}
+.home-work-pair .home-work-copy{padding:28px 30px 32px;min-height:255px;gap:12px}
+.home-work-pair .home-work-copy h3{font-size:clamp(26px,3vw,35px)}
+.home-work-pair .home-work-copy p{font-size:14px}
+.home-work-feature .home-work-picture:focus-visible,.home-work-pair .home-work-picture:focus-visible {outline:3px solid var(--h-purple);outline-offset:-4px}
+
+/* The lower half is supporting information, not four more competing posters. */
+.home-editorial .experience-section{background:#eef1fa!important;color:var(--h-text)!important;padding:88px 0!important}
+.home-editorial .experience-section .eyebrow {color:#5363a0!important}
+.home-editorial .experience-section h2 {color:var(--h-text);font-size:clamp(38px,4vw,55px)!important}
+.home-editorial .experience-section .section-sub{color:var(--h-muted)!important}
+.home-editorial .experience-copy{border-left:2px solid #becae5!important;padding-left:30px}
+.home-editorial .experience-copy h3{color:var(--h-text)!important;font-family:var(--h-secondary)!important}
+.home-editorial .experience-copy p,.home-editorial .experience-copy .experience-dates{color:var(--h-muted)!important;font-size:15px}
+.home-editorial .experience-copy .experience-dates{color:#5258a7!important;font-size:13px!important}
+.home-editorial .earlier-experience{background:#fff;border-color:#d2d9ea}
+.home-editorial .earlier-experience summary,.home-editorial .earlier-experience strong{color:var(--h-text)}
+.home-editorial .earlier-experience :is(ul,p){color:var(--h-muted)!important}
+.home-editorial .experience-copy .text-link{color:var(--h-purple)!important}
+.home-editorial .strengths-section{background:#fff!important;padding:84px 0!important}
+.home-editorial .strengths-section h2,.home-editorial .about-section h2 {font-size:clamp(38px,4vw,55px)!important}
+.home-editorial .strengths-section .skill-grid{margin-top:30px;gap:16px}
+.home-editorial .strengths-section .skill-grid article{min-height:0;background:#f8f9fc;border:1px solid #e0e5ee}
+.home-editorial .strengths-section .skill-grid h3{font-size:19px}
+.home-editorial .strengths-section .skill-grid p{font-size:14px;line-height:1.8}
+.home-editorial .about-section{background:#eef1fa!important;padding:82px 0!important}
+.home-editorial .about-mark{display:none}
+.home-editorial .about-text p:first-child{font:600 clamp(19px,2vw,24px)/1.5 var(--h-secondary);letter-spacing:-.025em;color:var(--h-text)}
+.home-editorial .about-text p:not(:first-child){color:var(--h-muted);font-size:15px;line-height:1.8}
+.home-editorial .about-text .text-link{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.home-editorial .footer h2,.home-editorial .footer h2 .script{font-family:var(--h-secondary)!important}
+.home-editorial .footer h2 .script{font-weight:700!important}
+
+/* Consistent responsive behavior. */
+@media(max-width:950px){
+ .home-hero-inner{grid-template-columns:1.05fr .95fr;gap:25px}
+ .home-hero h1{font-size:clamp(54px,7vw,80px)}
+ .home-work-heading{align-items:start}
+}
+@media(max-width:700px){
+ .home-editorial .ed-wrap{width:min(100% - 36px,580px)}
+ .home-editorial .home-hero{padding:53px 0 62px}
+ .home-hero-inner{grid-template-columns:1fr;gap:35px}
+ .home-hero h1{font-size:clamp(55px,12.2vw,80px)}
+ .home-hero-visual{max-width:480px}
+ .home-hero-photo{aspect-ratio:4/3;padding:12px}
+ .home-work-heading{display:block}
+ .home-work-heading p{margin-top:14px;max-width:500px}
+ .home-editorial .work-section{padding:65px 0 75px!important}
+ .home-work-feature,.home-work-pair{grid-template-columns:1fr}
+ .home-work-pair{gap:18px;margin-top:18px}
+ .home-work-feature .home-work-picture{min-height:230px;max-height:360px}
+ .home-work-feature .home-work-picture img{max-height:360px}
+ .home-work-copy,.home-work-pair .home-work-copy{padding:25px;min-height:0}
+ .home-editorial .experience-section,.home-editorial .strengths-section,.home-editorial .about-section{padding:65px 0!important}
+ .home-editorial .experience-copy{padding-left:18px}
+}
+@media(max-width:370px){
+ .home-hero h1{font-size:51px}
+ .home-hero .home-subtitle{font-size:23px}
+ .home-editorial .ed-wrap{width:calc(100% - 30px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-editorial *{scroll-behavior:auto}
+}
