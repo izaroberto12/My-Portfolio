@@ -569,3 +569,18 @@
 @media(prefers-reduced-motion:reduce) {
   .home-editorial .home-work-picture img {transition:none!important}
 }
+
+/* Image-aware thumbnails: website and mobile interface art must not be cropped. */
+.home-editorial .home-work-pair .home-prh-photo img,
+.home-editorial .home-work-pair .home-verde-photo img {
+  object-fit:contain;
+  object-position:center center;
+  transform:none;
+}
+.home-editorial .home-work-pair .home-prh-photo {background:#e6dfcc}
+.home-editorial .home-work-pair .home-verde-photo {background:#cddfc4}
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+  .home-editorial .home-work-pair :is(.home-prh-photo,.home-verde-photo):hover img {
+    transform:none;
+  }
+}
