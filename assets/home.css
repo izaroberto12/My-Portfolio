@@ -199,3 +199,144 @@
 @media(prefers-reduced-motion:reduce){
  .home-editorial .home-work-picture img{transition:none!important;transform:none!important}
 }
+
+
+/* VERSION A / PASTEL AFTER DARK: Superpop screenprint hero study.
+   Scoped to the homepage, preserving all case-study pages and project imagery. */
+.home-editorial {
+  --h-screen-ink:#252925;
+  --h-screen-coral:#f28c81;
+  --h-screen-blue:#aebff4;
+  --h-screen-sage:#b5d4b0;
+  --h-screen-paper:#f0e8d8;
+}
+.home-editorial .site-header {
+  background:var(--h-screen-ink);
+  border-bottom:1px solid #586054;
+  color:var(--h-screen-paper);
+}
+.home-editorial .logo {color:var(--h-screen-paper)}
+.home-editorial .logo span {color:var(--h-screen-coral)}
+.home-editorial .nav-links a {color:var(--h-screen-paper)}
+.home-editorial .nav-links a:hover {color:var(--h-screen-blue)}
+.home-editorial .nav-links .nav-contact {
+  background:var(--h-screen-sage);
+  color:var(--h-screen-ink);
+  border-color:var(--h-screen-sage);
+}
+.home-editorial .site-header .menu-button {
+  background:var(--h-screen-paper);
+  color:var(--h-screen-ink);
+  border-color:var(--h-screen-paper);
+}
+.home-editorial .home-hero {
+  background:var(--h-screen-ink);
+  color:var(--h-screen-paper);
+  padding:clamp(35px,5vw,66px) 0 30px;
+}
+.home-editorial .home-hero-inner {max-width:none}
+.home-editorial .home-hero-topline,
+.home-editorial .home-hero-foot {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+.home-editorial .home-hero-topline {
+  border-top:1px solid #677064;
+  padding-top:16px;
+}
+.home-editorial .home-hero .home-eyebrow,
+.home-editorial .home-hero .home-edition {
+  margin:0;
+  color:var(--h-screen-sage);
+  font:700 11px/1.5 var(--h-tertiary);
+  letter-spacing:.12em;
+}
+.home-editorial .home-hero .home-dot {background:var(--h-screen-coral)}
+.home-editorial .home-hero h1 {
+  margin:clamp(32px,5vw,70px) 0 clamp(32px,4.6vw,63px);
+  font-size:clamp(56px,10.8vw,164px);
+  line-height:.88;
+  letter-spacing:-.06em;
+  overflow-wrap:normal;
+}
+.home-editorial .home-hero .home-name {
+  font-family:var(--h-primary);
+  font-weight:700;
+  line-height:.92;
+  letter-spacing:-.065em;
+  color:var(--h-screen-coral);
+}
+.home-editorial .home-hero .home-name:last-of-type {color:var(--h-screen-blue)}
+.home-editorial .home-hero-lower {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:clamp(24px,5vw,70px);
+  padding:24px 0 44px;
+  border-top:1px solid #677064;
+}
+.home-editorial .home-hero-intro {max-width:680px}
+.home-editorial .home-hero .home-subtitle {
+  color:var(--h-screen-paper);
+  max-width:620px;
+  font-size:clamp(22px,2.5vw,31px);
+  margin:0 0 14px;
+}
+.home-editorial .home-hero .home-summary {
+  color:#e3e6d9;
+  max-width:590px;
+  font-size:15px;
+  line-height:1.7;
+}
+.home-editorial .home-hero .home-note {
+  color:var(--h-screen-sage);
+  margin:16px 0 0;
+}
+.home-editorial .home-hero .home-actions {
+  margin:0;
+  flex:none;
+  align-items:center;
+  justify-content:flex-end;
+}
+.home-editorial .home-hero .ed-cta {
+  background:var(--h-screen-coral);
+  color:var(--h-screen-ink)!important;
+}
+.home-editorial .home-hero .ed-cta:hover {background:#ffafa5}
+.home-editorial .home-hero .ed-outline {
+  color:var(--h-screen-paper);
+  border-color:#99a18e;
+}
+.home-editorial .home-hero .ed-outline:hover {background:#ffffff16}
+.home-editorial .home-hero-foot {
+  border-top:1px solid #677064;
+  padding-top:16px;
+  color:var(--h-screen-sage);
+  font:700 10px/1.5 var(--h-tertiary);
+  letter-spacing:.11em;
+}
+.home-editorial .home-hero-foot a:hover {color:var(--h-screen-coral)}
+.home-editorial :is(a,button,summary):focus-visible {
+  outline-color:var(--h-screen-coral);
+}
+@media(max-width:900px) {
+  .home-editorial .home-hero-lower {align-items:start;flex-direction:column}
+  .home-editorial .home-hero .home-actions {justify-content:flex-start}
+  .home-editorial .home-hero h1 {font-size:clamp(58px,11vw,108px)}
+}
+@media(max-width:700px) {
+  .home-editorial .home-hero {padding:30px 0 24px}
+  .home-editorial .home-hero .home-edition {display:none}
+  .home-editorial .home-hero h1 {
+    font-size:clamp(44px,10.7vw,74px);
+    margin:36px 0 32px;
+  }
+  .home-editorial .home-hero-lower {padding:24px 0 32px;gap:22px}
+  .home-editorial .home-hero-foot {font-size:9px;align-items:start}
+}
+@media(max-width:370px) {
+  .home-editorial .home-hero h1 {font-size:10.4vw}
+  .home-editorial .home-hero-foot {flex-direction:column;gap:7px}
+}
