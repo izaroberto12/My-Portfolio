@@ -117,3 +117,10 @@ body{color:var(--ink);background:#f6f8fc}
 #workflow .steps{max-width:900px}
 #workflow .step{background:#fff}
 @media(max-width:600px){.graphics-grid{grid-template-columns:1fr}.graphics-slot-media{height:200px}}
+
+/* Actual optimized ambulance work photos */
+.graphics-image-link{display:block;overflow:hidden;background:#dce4f0}
+.graphics-photo{display:block;width:100%;height:240px;object-fit:cover;object-position:center;transition:transform .22s ease}
+.graphics-image-link:hover .graphics-photo{transform:scale(1.025)}
+.graphics-image-link:focus-visible{outline:3px solid #7545d8;outline-offset:-3px}
+@media(max-width:600px){.graphics-photo{height:200px}}

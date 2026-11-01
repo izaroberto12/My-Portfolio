@@ -23,3 +23,6 @@ The public site remains on `portfolio-redesign-2026`, which still shows NASA. Th
 - Replace seven labeled placeholders with real approved photos, then validate image alt text, mobile display, and links.
 - Do not replace NASA on the live branch until image approval.
 - Keep the original `work/nasa.html` in Git history. This gallery draft excludes the hardhat concept.
+
+## Photos included
+Seven approved-by-user-for-public-display JPEG crops saved under `assets/ambulance/`. Originals remain in Google Drive. Exif including device and GPS stripped from copies. Subjects shown are brand/production imagery without publishing employee faces or private work account details.
