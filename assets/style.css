@@ -143,3 +143,14 @@ body{color:var(--ink);background:#f6f8fc}
 .production-toolbox{margin-top:26px;padding:23px 26px;border:1px solid #dce4ee;border-radius:14px;background:#fff;max-width:900px}
 .production-toolbox h3{font-size:19px;margin-bottom:8px}.production-toolbox p{font-size:14px;color:var(--muted);margin:8px 0;line-height:1.7}
 @media(max-width:700px){.experience-layout{grid-template-columns:1fr;gap:24px}#skills .skill-grid{grid-template-columns:1fr}}
+
+/* Resume-aligned experience: compact details with keyboard-accessible disclosure. */
+.experience-dates{font-size:13px!important;font-weight:700;color:#4d6b9c!important;margin-top:-6px;margin-bottom:14px!important}
+.experience-copy h3:not(:first-child){margin-top:26px}
+.earlier-experience{margin:24px 0 20px;padding:16px 18px;border:1px solid #dce4ee;border-radius:14px;background:#fff}
+.earlier-experience summary{cursor:pointer;font-weight:800;color:var(--deep)}
+.earlier-experience summary:focus-visible{outline:3px solid #346dc6;outline-offset:4px}
+.earlier-experience ul{margin:18px 0 12px;padding-left:21px;color:var(--muted);font-size:14px;line-height:1.8}
+.earlier-experience li+li{margin-top:10px}
+.earlier-experience strong{color:var(--ink)}
+.earlier-experience p{margin:12px 0 0!important}
