@@ -7,7 +7,7 @@ Built as a static website with HTML, CSS and JavaScript, with AI assistance. Rob
 
 ## Files
 - `index.html`: home, project showcase, professional experience, software & equipment, About, contact
-- `work/portfolio-build.html`: front-end build case study, scope and AI-assistance disclosure
+- `work/portfolio-build.html`: preserved, unfeatured documentation of the AI-assisted website build
 - `work/project-row-houses.html` and `work/verde.html`: UX/UI case studies with archive links
 - `work/graphic-design.html`: Graphic Production professional work showcase with seven optimized photographs of finished vehicle graphics and production processes
 - `work/nasa.html`: preserved archived UX case study; no longer linked from the homepage
