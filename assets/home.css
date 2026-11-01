@@ -30,7 +30,7 @@
 .home-editorial .script,
 .home-editorial .logo,
 .home-editorial .about-mark {font-family:var(--h-secondary)!important;letter-spacing:-.04em}
-.home-editorial .logo{font-weight:700;font-size:29px}
+.home-editorial .logo{font-family:var(--h-primary)!important;font-weight:700;font-size:29px;letter-spacing:-.015em}
 .home-editorial .site-header{background:#fff;border-bottom:1px solid var(--h-line)}
 .home-editorial .nav-links {gap:25px}
 .home-editorial .nav-links a{font-size:13px;font-weight:600}
@@ -60,10 +60,10 @@
 .home-hero .ed-outline:hover{background:#ffffff15}
 .home-hero-visual{margin:0;position:relative;min-width:0}
 .home-hero-photo{
-  background:#223759;border:1px solid #7282a3;display:grid;place-items:center;padding:18px;
+  background:#223759;border:0;display:block;padding:0;
   aspect-ratio:4/5;overflow:hidden;
 }
-.home-hero-photo img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;display:block}
+.home-hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .home-hero-visual figcaption{margin-top:12px;color:#bdcbe7;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .home-hero-visual figcaption strong{color:#e0dbff}
 .home-hero .home-note{color:#a7b8dc;font-size:12px;max-width:530px;margin-top:22px}
@@ -74,11 +74,11 @@
 .home-work-heading h2{font-size:clamp(44px,5.4vw,76px);margin:12px 0 0}
 .home-work-heading p{max-width:360px;color:var(--h-muted);font-size:15px;line-height:1.75}
 .home-work-feature{
-  background:#fff;border:1px solid var(--h-line);display:grid;grid-template-columns:1.2fr 1fr;
-  min-height:380px;overflow:hidden;
+  background:#fff;border:1px solid var(--h-line);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  min-height:440px;overflow:hidden;
 }
-.home-work-feature .home-work-picture{background:#18283f;display:grid;place-items:center;min-height:320px}
-.home-work-feature .home-work-picture img{width:100%;height:100%;max-height:450px;object-fit:contain;display:block}
+.home-work-feature .home-work-picture{background:#e3e7ec;display:block;min-height:440px;overflow:hidden}
+.home-work-feature .home-work-picture img{width:100%;height:100%;object-fit:cover;object-position:center 56%;display:block;transition:transform .3s ease}
 .home-work-copy{padding:35px 38px;display:flex;flex-direction:column;justify-content:center;align-items:start;gap:15px}
 .home-work-copy .ed-kicker{color:#5d62a8}
 .home-work-copy h3{font-size:clamp(32px,3.35vw,48px);margin:0}
@@ -87,8 +87,8 @@
 .home-work-link:hover{color:var(--h-purple)}
 .home-work-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
 .home-work-pair .home-work-card{background:#fff;border:1px solid var(--h-line);min-width:0;overflow:hidden}
-.home-work-pair .home-work-picture{display:flex;align-items:center;justify-content:center;background:#e4e0f2;aspect-ratio:16/10;padding:23px;overflow:hidden}
-.home-work-pair .home-work-picture img{max-height:100%;height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
+.home-work-pair .home-work-picture{display:block;background:#e4e0f2;aspect-ratio:16/10;padding:0;overflow:hidden}
+.home-work-pair .home-work-picture img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center;display:block;transition:transform .3s ease}
 .home-work-pair .home-prh-photo{background:#eee5d7}
 .home-work-pair .home-verde-photo{background:#dce9dc}
 .home-work-pair .home-work-copy{padding:28px 30px 32px;min-height:255px;gap:12px}
@@ -135,14 +135,14 @@
  .home-hero-inner{grid-template-columns:1fr;gap:35px}
  .home-hero h1{font-size:clamp(55px,12.2vw,80px)}
  .home-hero-visual{max-width:480px}
- .home-hero-photo{aspect-ratio:4/3;padding:12px}
+ .home-hero-photo{aspect-ratio:4/3;padding:0}
  .home-work-heading{display:block}
  .home-work-heading p{margin-top:14px;max-width:500px}
  .home-editorial .work-section{padding:65px 0 75px!important}
  .home-work-feature,.home-work-pair{grid-template-columns:1fr}
  .home-work-pair{gap:18px;margin-top:18px}
- .home-work-feature .home-work-picture{min-height:230px;max-height:360px}
- .home-work-feature .home-work-picture img{max-height:360px}
+ .home-work-feature .home-work-picture{min-height:0;aspect-ratio:6/5;max-height:none}
+ .home-work-feature .home-work-picture img{height:100%;max-height:none}
  .home-work-copy,.home-work-pair .home-work-copy{padding:25px;min-height:0}
  .home-editorial .experience-section,.home-editorial .strengths-section,.home-editorial .about-section{padding:65px 0!important}
  .home-editorial .experience-copy{padding-left:18px}
@@ -154,4 +154,60 @@
 }
 @media(prefers-reduced-motion:reduce){
  .home-editorial *{scroll-behavior:auto}
+}
+
+/* Consistent three-font system across the entire homepage.
+   Superpop: logo, display headings, featured project titles, final call to action.
+   Space Grotesk: subheadings and informational titles.
+   Roboto: paragraph copy, navigation, buttons and metadata.
+   Superpop's Adobe Web Project is loaded in index.html. */
+.home-editorial :is(
+  .home-work-heading h2,
+  .home-work-copy h3,
+  .experience-section h2,
+  .strengths-section h2,
+  .about-section h2,
+  .footer h2,
+  .footer h2 .script
+){
+  font-family:var(--h-primary)!important;
+  font-weight:700!important;
+  letter-spacing:-.02em!important;
+  line-height:1.13!important;
+}
+.home-editorial :is(
+  .home-subtitle,
+  .experience-copy h3,
+  .strengths-section .skill-grid h3,
+  .about-text p:first-child
+){font-family:var(--h-secondary)!important;}
+.home-editorial :is(
+  .nav-links a,
+  .home-summary,
+  .home-work-copy p,
+  .experience-copy p,
+  .strengths-section p,
+  .about-text p,
+  .footer p,
+  .ed-kicker,
+  .eyebrow,
+  .ed-cta,
+  .ed-outline,
+  .home-work-link
+){font-family:var(--h-tertiary)!important;}
+.home-editorial .home-work-picture img{transform:scale(1)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .home-editorial .home-work-picture:hover img{transform:scale(1.035)}
+}
+.home-editorial .home-work-feature .home-work-picture{position:relative}
+.home-editorial .home-work-pair .home-work-picture{position:relative}
+.home-editorial .home-work-feature .home-work-picture img{position:absolute;inset:0}
+.home-editorial .home-work-pair .home-work-picture img{position:absolute;inset:0}
+.home-editorial .home-work-copy h3{overflow-wrap:break-word}
+.home-editorial .home-work-heading h2{max-width:780px}
+@media(max-width:700px){
+ .home-editorial .home-work-feature .home-work-picture img{object-position:center 50%}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-editorial .home-work-picture img{transition:none!important;transform:none!important}
 }
