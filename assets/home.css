@@ -340,3 +340,213 @@
   .home-editorial .home-hero h1 {font-size:10.4vw}
   .home-editorial .home-hero-foot {flex-direction:column;gap:7px}
 }
+
+
+/* SCREENPRINT SYSTEM / HOMEPAGE V2
+   A cohesive dark-first treatment for the homepage only.
+   Keep the real project images, layout, and all individual case studies unchanged. */
+.home-editorial {
+  --h-text:#252925;
+  --h-muted:#4c5a4d;
+  --h-line:#687365;
+  --h-surface:#252925;
+  --h-purple:#f28c81;
+  --h-blue:#f28c81;
+  background:var(--h-screen-ink);
+}
+.home-editorial .site-header {
+  background:var(--h-screen-ink);
+  color:var(--h-screen-paper);
+  border-bottom-color:#677064;
+}
+.home-editorial .nav-links {
+  background:transparent; /* cancels the old global white nav strip */
+  box-shadow:none;
+  color:var(--h-screen-paper);
+}
+.home-editorial .nav-links a {color:var(--h-screen-paper)}
+.home-editorial .nav-links a:not(.nav-contact):hover {color:var(--h-screen-blue)}
+.home-editorial .nav-links .nav-contact {
+  background:var(--h-screen-sage);
+  border-color:var(--h-screen-sage);
+  color:var(--h-screen-ink);
+}
+.home-editorial .nav-links .nav-contact:hover {
+  background:var(--h-screen-blue);
+  border-color:var(--h-screen-blue);
+  color:var(--h-screen-ink);
+}
+.home-editorial .logo,
+.home-editorial .logo:visited {color:var(--h-screen-paper)}
+
+/* Selected work: dark ink surround, authentic photographs, warm inked panels. */
+.home-editorial .work-section {
+  background:var(--h-screen-ink)!important;
+  color:var(--h-screen-paper);
+  padding:clamp(78px,8vw,125px) 0!important;
+  border-top:1px solid #687365;
+}
+.home-editorial .work-section .home-work-heading {
+  border-color:#687365;
+  margin-bottom:34px;
+}
+.home-editorial .work-section .home-work-heading .ed-kicker {color:var(--h-screen-sage)}
+.home-editorial .work-section .home-work-heading h2 {
+  color:var(--h-screen-blue);
+  font-size:clamp(48px,6vw,86px);
+  letter-spacing:-.04em!important;
+  line-height:1.04!important;
+}
+.home-editorial .work-section .home-work-heading p {
+  color:#e2e6da;
+  font-size:15px;
+}
+.home-editorial .home-work-feature {
+  background:#333d34;
+  border:1px solid #718074;
+  grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);
+}
+.home-editorial .home-work-feature .home-work-copy {color:var(--h-screen-paper)}
+.home-editorial .home-work-feature .home-work-copy h3 {color:var(--h-screen-coral)}
+.home-editorial .home-work-feature .home-work-copy .ed-kicker {color:var(--h-screen-sage)}
+.home-editorial .home-work-feature .home-work-copy p {color:#e0e7d9}
+.home-editorial .home-work-feature .home-work-link {color:var(--h-screen-paper)}
+.home-editorial .home-work-feature .home-work-link:hover {color:var(--h-screen-blue)}
+.home-editorial .home-work-pair {gap:22px}
+.home-editorial .home-work-pair .home-work-card {
+  border:1px solid #6c786b;
+  color:var(--h-screen-ink);
+}
+.home-editorial .home-work-pair .home-work-card:first-child {background:var(--h-screen-paper)}
+.home-editorial .home-work-pair .home-work-card:last-child {background:#cddfc4}
+.home-editorial .home-work-pair .home-work-copy h3 {color:var(--h-screen-ink)}
+.home-editorial .home-work-pair .home-work-copy .ed-kicker {color:#4b614e}
+.home-editorial .home-work-pair .home-work-copy p {color:#37473b}
+.home-editorial .home-work-pair .home-work-link {color:#25372c}
+.home-editorial .home-work-pair .home-work-link:hover {color:#864038}
+.home-editorial .home-work-picture:focus-visible {outline-color:var(--h-screen-coral)}
+.home-editorial .home-work-pair .home-prh-photo {background:#e6dbbf}
+.home-editorial .home-work-pair .home-verde-photo {background:#cddfc4}
+
+/* A paper interlude makes the darker screenprint panels feel intentional. */
+.home-editorial .experience-section {
+  background:var(--h-screen-paper)!important;
+  color:var(--h-screen-ink)!important;
+  border-top:1px solid #acb6a1;
+}
+.home-editorial .experience-section .eyebrow {color:#435e45!important}
+.home-editorial .experience-section h2 {
+  color:var(--h-screen-ink)!important;
+  font-size:clamp(46px,5.2vw,72px)!important;
+}
+.home-editorial .experience-section .section-sub {color:#4d5c50!important}
+.home-editorial .experience-copy {
+  border-left:2px solid #92a38f!important;
+}
+.home-editorial .experience-copy h3 {color:#252925!important}
+.home-editorial .experience-copy p {color:#3d4a40!important}
+.home-editorial .experience-copy .experience-dates {color:#70554b!important}
+.home-editorial .earlier-experience {
+  background:#e2e7d8;
+  border:1px solid #abb7a3;
+}
+.home-editorial .earlier-experience summary,
+.home-editorial .earlier-experience strong {color:#252925}
+.home-editorial .earlier-experience :is(ul,p) {color:#35483a!important}
+.home-editorial .experience-copy .text-link {color:#644c44!important}
+.home-editorial .experience-copy .text-link:hover {color:#263d30!important}
+
+/* Tools: a quieter dark layer and four tactile panels instead of white cards. */
+.home-editorial .strengths-section {
+  background:#30382f!important;
+  color:var(--h-screen-paper)!important;
+  border-top:1px solid #6a7568;
+}
+.home-editorial .strengths-section .eyebrow {color:var(--h-screen-sage)}
+.home-editorial .strengths-section h2 {
+  color:var(--h-screen-blue);
+  font-size:clamp(46px,5.2vw,72px)!important;
+}
+.home-editorial .strengths-section .section-sub {color:#e2e6da}
+.home-editorial .strengths-section .skill-grid article {
+  background:#3c463c;
+  border:1px solid #718073;
+  box-shadow:none;
+  color:var(--h-screen-paper);
+  border-radius:4px;
+}
+.home-editorial .strengths-section .skill-grid article:nth-child(1) {border-top:5px solid var(--h-screen-coral)}
+.home-editorial .strengths-section .skill-grid article:nth-child(2) {border-top:5px solid var(--h-screen-blue)}
+.home-editorial .strengths-section .skill-grid article:nth-child(3) {border-top:5px solid var(--h-screen-sage)}
+.home-editorial .strengths-section .skill-grid article:nth-child(4) {border-top:5px solid var(--h-screen-paper)}
+.home-editorial .strengths-section .skill-grid h3 {color:var(--h-screen-paper)}
+.home-editorial .strengths-section .skill-grid p {color:#e0e8dc}
+.home-editorial .strengths-section .skill-icon {
+  background:var(--h-screen-sage);
+  color:var(--h-screen-ink);
+  border-radius:3px;
+}
+.home-editorial .strengths-section .skill-icon.pink {background:var(--h-screen-coral)}
+.home-editorial .strengths-section .skill-icon.lavender {background:var(--h-screen-blue)}
+.home-editorial .strengths-section .source-note {color:#e0e8dc}
+.home-editorial .strengths-section .source-note a {color:var(--h-screen-blue)}
+.home-editorial .strengths-section .source-note a:hover {color:var(--h-screen-coral)}
+
+/* About and contact: return to the darkest ink with a coral farewell. */
+.home-editorial .about-section {
+  background:var(--h-screen-ink)!important;
+  color:var(--h-screen-paper)!important;
+  border-top:1px solid #697568;
+}
+.home-editorial .about-section .eyebrow {color:var(--h-screen-sage)}
+.home-editorial .about-section h2 {
+  color:var(--h-screen-coral);
+  font-size:clamp(46px,5.2vw,72px)!important;
+}
+.home-editorial .about-text p:first-child {color:var(--h-screen-paper)}
+.home-editorial .about-text p:not(:first-child) {color:#e0e8dc}
+.home-editorial .about-text .text-link {color:var(--h-screen-blue)}
+.home-editorial .about-text .text-link:hover {color:var(--h-screen-coral)}
+.home-editorial .footer {
+  background:#1c221e;
+  color:var(--h-screen-paper);
+  border-top:1px solid #687365;
+}
+.home-editorial .footer .eyebrow {color:var(--h-screen-sage)}
+.home-editorial .footer h2 {color:var(--h-screen-paper)}
+.home-editorial .footer h2 .script {color:var(--h-screen-coral)}
+.home-editorial .footer p {color:#e0e8dc}
+.home-editorial .footer .button-pink {
+  background:var(--h-screen-coral);
+  color:var(--h-screen-ink);
+  border-color:var(--h-screen-coral);
+}
+.home-editorial .footer .button-pink:hover {background:var(--h-screen-blue)}
+.home-editorial .footer-bottom {
+  color:#d5dece;
+  border-top-color:#677064;
+}
+.home-editorial .footer-bottom a:hover {color:var(--h-screen-coral)}
+
+/* Mobile navigation remains ink-dark, never white. */
+@media(max-width:700px) {
+  .home-editorial .site-header .nav-links {
+    background:var(--h-screen-ink);
+    color:var(--h-screen-paper);
+    border-bottom:1px solid #677064;
+    box-shadow:0 16px 26px #151a16aa;
+    padding:22px max(18px,6vw) 26px;
+  }
+  .home-editorial .site-header .nav-links:not(.is-open) {display:none}
+  .home-editorial .site-header .nav-links.is-open {display:flex}
+  .home-editorial .site-header .nav-links a:not(.nav-contact) {color:var(--h-screen-paper)}
+  .home-editorial .site-header .nav-links .nav-contact {color:var(--h-screen-ink)}
+  .home-editorial .work-section .home-work-heading h2 {font-size:clamp(41px,9vw,62px)}
+  .home-editorial .home-work-feature {grid-template-columns:1fr}
+  .home-editorial .home-work-pair {grid-template-columns:1fr}
+  .home-editorial .home-work-feature .home-work-copy,
+  .home-editorial .home-work-pair .home-work-copy {padding:27px 25px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-editorial .home-work-picture img {transition:none!important}
+}
