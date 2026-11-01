@@ -342,25 +342,26 @@
 }
 
 
-/* SCREENPRINT SYSTEM / HOMEPAGE V2
-   A cohesive dark-first treatment for the homepage only.
-   Keep the real project images, layout, and all individual case studies unchanged. */
+/* SCREENPRINT SYSTEM / HOMEPAGE V3
+   Paper-first sections + softly rounded project cards.
+   Hero and footer retain the screenprint ink; no case-study styles are modified. */
 .home-editorial {
   --h-text:#252925;
-  --h-muted:#4c5a4d;
-  --h-line:#687365;
-  --h-surface:#252925;
-  --h-purple:#f28c81;
-  --h-blue:#f28c81;
-  background:var(--h-screen-ink);
+  --h-muted:#465147;
+  --h-line:#c0b8a9;
+  --h-surface:var(--h-screen-paper);
+  --h-purple:#a94e48;
+  --h-blue:#a94e48;
+  background:var(--h-screen-paper);
 }
+/* Keep the charcoal navigation flush with the hero: no white container. */
 .home-editorial .site-header {
   background:var(--h-screen-ink);
   color:var(--h-screen-paper);
   border-bottom-color:#677064;
 }
 .home-editorial .nav-links {
-  background:transparent; /* cancels the old global white nav strip */
+  background:transparent;
   box-shadow:none;
   color:var(--h-screen-paper);
 }
@@ -379,32 +380,37 @@
 .home-editorial .logo,
 .home-editorial .logo:visited {color:var(--h-screen-paper)}
 
-/* Selected work: dark ink surround, authentic photographs, warm inked panels. */
+/* SELECTED WORK / warm paper field and soft printed-card geometry. */
 .home-editorial .work-section {
-  background:var(--h-screen-ink)!important;
-  color:var(--h-screen-paper);
+  background:var(--h-screen-paper)!important;
+  color:var(--h-screen-ink);
   padding:clamp(78px,8vw,125px) 0!important;
-  border-top:1px solid #687365;
+  border-top:1px solid #c1b8a7;
 }
 .home-editorial .work-section .home-work-heading {
-  border-color:#687365;
+  border-color:#bcb3a3;
   margin-bottom:34px;
 }
-.home-editorial .work-section .home-work-heading .ed-kicker {color:var(--h-screen-sage)}
+.home-editorial .work-section .home-work-heading .ed-kicker {color:#425c47}
 .home-editorial .work-section .home-work-heading h2 {
-  color:var(--h-screen-blue);
+  color:var(--h-screen-ink);
   font-size:clamp(48px,6vw,86px);
   letter-spacing:-.04em!important;
   line-height:1.04!important;
 }
-.home-editorial .work-section .home-work-heading p {
-  color:#e2e6da;
-  font-size:15px;
-}
+.home-editorial .work-section .home-work-heading p {color:#47534a;font-size:15px}
 .home-editorial .home-work-feature {
   background:#333d34;
-  border:1px solid #718074;
+  border:1px solid #657365;
+  border-radius:30px;
+  box-shadow:0 12px 0 #25292512;
   grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);
+  overflow:hidden;
+}
+.home-editorial .home-work-feature .home-work-picture {
+  margin:12px 0 12px 12px;
+  border-radius:20px;
+  overflow:hidden;
 }
 .home-editorial .home-work-feature .home-work-copy {color:var(--h-screen-paper)}
 .home-editorial .home-work-feature .home-work-copy h3 {color:var(--h-screen-coral)}
@@ -412,15 +418,24 @@
 .home-editorial .home-work-feature .home-work-copy p {color:#e0e7d9}
 .home-editorial .home-work-feature .home-work-link {color:var(--h-screen-paper)}
 .home-editorial .home-work-feature .home-work-link:hover {color:var(--h-screen-blue)}
-.home-editorial .home-work-pair {gap:22px}
+
+.home-editorial .home-work-pair {gap:24px;margin-top:24px}
 .home-editorial .home-work-pair .home-work-card {
-  border:1px solid #6c786b;
+  border:1px solid #b0b5a4;
   color:var(--h-screen-ink);
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 10px 0 #2529250d;
 }
-.home-editorial .home-work-pair .home-work-card:first-child {background:var(--h-screen-paper)}
+.home-editorial .home-work-pair .home-work-card:first-child {background:#fbf5e9}
 .home-editorial .home-work-pair .home-work-card:last-child {background:#cddfc4}
+.home-editorial .home-work-pair .home-work-picture {
+  margin:12px 12px 0;
+  border-radius:18px;
+  overflow:hidden;
+}
 .home-editorial .home-work-pair .home-work-copy h3 {color:var(--h-screen-ink)}
-.home-editorial .home-work-pair .home-work-copy .ed-kicker {color:#4b614e}
+.home-editorial .home-work-pair .home-work-copy .ed-kicker {color:#435c45}
 .home-editorial .home-work-pair .home-work-copy p {color:#37473b}
 .home-editorial .home-work-pair .home-work-link {color:#25372c}
 .home-editorial .home-work-pair .home-work-link:hover {color:#864038}
@@ -428,11 +443,11 @@
 .home-editorial .home-work-pair .home-prh-photo {background:#e6dbbf}
 .home-editorial .home-work-pair .home-verde-photo {background:#cddfc4}
 
-/* A paper interlude makes the darker screenprint panels feel intentional. */
+/* EXPERIENCE / a subtle shift in the paper stock, not another dark slab. */
 .home-editorial .experience-section {
-  background:var(--h-screen-paper)!important;
+  background:#e7dfd0!important;
   color:var(--h-screen-ink)!important;
-  border-top:1px solid #acb6a1;
+  border-top:1px solid #c1b8a7;
 }
 .home-editorial .experience-section .eyebrow {color:#435e45!important}
 .home-editorial .experience-section h2 {
@@ -440,15 +455,15 @@
   font-size:clamp(46px,5.2vw,72px)!important;
 }
 .home-editorial .experience-section .section-sub {color:#4d5c50!important}
-.home-editorial .experience-copy {
-  border-left:2px solid #92a38f!important;
-}
+.home-editorial .experience-copy {border-left:2px solid #92a38f!important}
 .home-editorial .experience-copy h3 {color:#252925!important}
 .home-editorial .experience-copy p {color:#3d4a40!important}
 .home-editorial .experience-copy .experience-dates {color:#70554b!important}
 .home-editorial .earlier-experience {
-  background:#e2e7d8;
-  border:1px solid #abb7a3;
+  background:#f4ecdd;
+  border:1px solid #b6b6a6;
+  border-radius:20px;
+  overflow:hidden;
 }
 .home-editorial .earlier-experience summary,
 .home-editorial .earlier-experience strong {color:#252925}
@@ -456,43 +471,44 @@
 .home-editorial .experience-copy .text-link {color:#644c44!important}
 .home-editorial .experience-copy .text-link:hover {color:#263d30!important}
 
-/* Tools: a quieter dark layer and four tactile panels instead of white cards. */
+/* TOOLS / pastel sage paper + soft tactile panels, no square or white boxes. */
 .home-editorial .strengths-section {
-  background:#30382f!important;
-  color:var(--h-screen-paper)!important;
-  border-top:1px solid #6a7568;
+  background:#dce7d5!important;
+  color:var(--h-screen-ink)!important;
+  border-top:1px solid #adbaa5;
 }
-.home-editorial .strengths-section .eyebrow {color:var(--h-screen-sage)}
+.home-editorial .strengths-section .eyebrow {color:#435c45}
 .home-editorial .strengths-section h2 {
-  color:var(--h-screen-blue);
+  color:var(--h-screen-ink);
   font-size:clamp(46px,5.2vw,72px)!important;
 }
-.home-editorial .strengths-section .section-sub {color:#e2e6da}
+.home-editorial .strengths-section .section-sub {color:#405044}
 .home-editorial .strengths-section .skill-grid article {
-  background:#3c463c;
-  border:1px solid #718073;
-  box-shadow:none;
-  color:var(--h-screen-paper);
-  border-radius:4px;
+  background:#f9f3e8;
+  border:1px solid #a8b5a3;
+  box-shadow:0 7px 0 #2529250a;
+  color:var(--h-screen-ink);
+  border-radius:24px;
+  overflow:hidden;
 }
-.home-editorial .strengths-section .skill-grid article:nth-child(1) {border-top:5px solid var(--h-screen-coral)}
-.home-editorial .strengths-section .skill-grid article:nth-child(2) {border-top:5px solid var(--h-screen-blue)}
-.home-editorial .strengths-section .skill-grid article:nth-child(3) {border-top:5px solid var(--h-screen-sage)}
-.home-editorial .strengths-section .skill-grid article:nth-child(4) {border-top:5px solid var(--h-screen-paper)}
-.home-editorial .strengths-section .skill-grid h3 {color:var(--h-screen-paper)}
-.home-editorial .strengths-section .skill-grid p {color:#e0e8dc}
+.home-editorial .strengths-section .skill-grid article:nth-child(1) {border-top:5px solid #da756c}
+.home-editorial .strengths-section .skill-grid article:nth-child(2) {border-top:5px solid #899ed8}
+.home-editorial .strengths-section .skill-grid article:nth-child(3) {border-top:5px solid #859c7a}
+.home-editorial .strengths-section .skill-grid article:nth-child(4) {border-top:5px solid #6b7567}
+.home-editorial .strengths-section .skill-grid h3 {color:#252925}
+.home-editorial .strengths-section .skill-grid p {color:#435046}
 .home-editorial .strengths-section .skill-icon {
   background:var(--h-screen-sage);
   color:var(--h-screen-ink);
-  border-radius:3px;
+  border-radius:14px;
 }
 .home-editorial .strengths-section .skill-icon.pink {background:var(--h-screen-coral)}
 .home-editorial .strengths-section .skill-icon.lavender {background:var(--h-screen-blue)}
-.home-editorial .strengths-section .source-note {color:#e0e8dc}
-.home-editorial .strengths-section .source-note a {color:var(--h-screen-blue)}
-.home-editorial .strengths-section .source-note a:hover {color:var(--h-screen-coral)}
+.home-editorial .strengths-section .source-note {color:#435046}
+.home-editorial .strengths-section .source-note a {color:#334e4b}
+.home-editorial .strengths-section .source-note a:hover {color:#843e3c}
 
-/* About and contact: return to the darkest ink with a coral farewell. */
+/* ABOUT + FOOTER / the dark ink returns to bookend the warmer content. */
 .home-editorial .about-section {
   background:var(--h-screen-ink)!important;
   color:var(--h-screen-paper)!important;
@@ -528,7 +544,7 @@
 }
 .home-editorial .footer-bottom a:hover {color:var(--h-screen-coral)}
 
-/* Mobile navigation remains ink-dark, never white. */
+/* Keep the mobile menu dark, and cards soft on narrow screens. */
 @media(max-width:700px) {
   .home-editorial .site-header .nav-links {
     background:var(--h-screen-ink);
@@ -542,8 +558,11 @@
   .home-editorial .site-header .nav-links a:not(.nav-contact) {color:var(--h-screen-paper)}
   .home-editorial .site-header .nav-links .nav-contact {color:var(--h-screen-ink)}
   .home-editorial .work-section .home-work-heading h2 {font-size:clamp(41px,9vw,62px)}
-  .home-editorial .home-work-feature {grid-template-columns:1fr}
-  .home-editorial .home-work-pair {grid-template-columns:1fr}
+  .home-editorial .home-work-feature {grid-template-columns:1fr;border-radius:24px}
+  .home-editorial .home-work-feature .home-work-picture {margin:10px 10px 0;border-radius:16px}
+  .home-editorial .home-work-pair {grid-template-columns:1fr;gap:20px;margin-top:20px}
+  .home-editorial .home-work-pair .home-work-card {border-radius:24px}
+  .home-editorial .home-work-pair .home-work-picture {margin:10px 10px 0;border-radius:16px}
   .home-editorial .home-work-feature .home-work-copy,
   .home-editorial .home-work-pair .home-work-copy {padding:27px 25px}
 }
