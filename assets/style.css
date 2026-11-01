@@ -108,3 +108,12 @@ body{color:var(--ink);background:#f6f8fc}
 .graphics-slot p{color:var(--muted);font-size:13px;margin:0}
 @media(max-width:800px){.graphics-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:550px){.graphics-grid{grid-template-columns:1fr}.graphics-slot-media{height:180px}}
+
+/* Production gallery cards and headings */
+.graphics-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.graphics-slot .eyebrow{display:block;margin-bottom:6px;font-size:10px}
+.graphics-slot-media{height:240px}
+.graphics-slot h3{margin-top:2px}
+#workflow .steps{max-width:900px}
+#workflow .step{background:#fff}
+@media(max-width:600px){.graphics-grid{grid-template-columns:1fr}.graphics-slot-media{height:200px}}
