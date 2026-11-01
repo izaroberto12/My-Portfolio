@@ -1,7 +1,7 @@
 /* HOMEPAGE 2026 / TYPOGRAPHY AND LAYOUT
-   Primary: Adobe Fonts Superpop Variable (requires owner's Web Project embed).
-   The exact kit CSS family name must be confirmed in Adobe's Web Project.
-   Until connected, Space Grotesk displays as the primary fallback.
+   Primary: Adobe Fonts Superpop Variable (Adobe Web Project qjr3tcz).
+   CSS family-name fallback candidates cover Adobe's possible kit naming.
+   Space Grotesk remains available if the Adobe kit is blocked or unavailable.
    Secondary: Space Grotesk. Tertiary: Roboto.
    All overrides are scoped to .home-editorial: case studies are untouched. */
 .home-editorial {
