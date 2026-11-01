@@ -1,0 +1,189 @@
+/* 2026 portfolio design system
+   Shared brand language only. Project-specific section backgrounds and colors
+   remain defined in editorial.css and verde.css. Archived pages are untouched. */
+:is(body.production-editorial,body.prh-editorial,body.verde-case) {
+  --portfolio-display:"superpop-variable","superpop","Space Grotesk",sans-serif;
+  --portfolio-secondary:"Space Grotesk",sans-serif;
+  --portfolio-ink:#252925;
+  --portfolio-paper:#f0e8d8;
+  --portfolio-coral:#f28c81;
+  --portfolio-sage:#b5d4b0;
+  --portfolio-blue:#aebff4;
+  --portfolio-radius:26px;
+  --case-accent:#b5d4b0;
+}
+body.production-editorial {--case-accent:#c4b6f5;--case-outline:#a894dc}
+body.prh-editorial {--case-accent:#f1aaa0;--case-outline:#ae434a}
+body.verde-case {--case-accent:#bce4a5;--case-outline:#4f956e}
+
+/* Brand navigation: matches the homepage, with a project-colored contact pill. */
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header {
+  background:var(--portfolio-ink);
+  color:var(--portfolio-paper);
+  border-bottom:1px solid #667164;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .logo {
+  font-family:var(--portfolio-display)!important;
+  font-weight:700;
+  letter-spacing:-.015em;
+  font-size:29px;
+  color:var(--portfolio-paper);
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .logo span {color:var(--case-accent)}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links {
+  background:transparent;
+  box-shadow:none;
+  gap:25px;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links a {
+  color:var(--portfolio-paper);
+  font-size:13px;
+  font-weight:600;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links a:not(.nav-contact):hover {color:var(--case-accent)}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links .nav-contact {
+  background:var(--case-accent);
+  border:1px solid var(--case-accent);
+  border-radius:100px;
+  color:var(--portfolio-ink);
+  padding:10px 18px;
+  font-weight:700;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links .nav-contact:hover {
+  background:var(--portfolio-paper);
+  border-color:var(--portfolio-paper);
+  color:var(--portfolio-ink);
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .menu-button {
+  background:var(--portfolio-paper);
+  color:var(--portfolio-ink);
+  border:1px solid var(--portfolio-paper);
+  border-radius:14px;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) :is(a,button,summary):focus-visible {
+  outline:3px solid var(--case-outline);
+  outline-offset:4px;
+}
+/* Intentional use of playful display type, with calm secondary and body faces. */
+body.production-editorial :is(.prod-hero h1,.prod-intro h2,.prod-process h2,.prod-gallery-head h2,.prod-break p,.prod-next h2),
+body.prh-editorial :is(.prh-headline,.prh-place-layout h2,.prh-visual-archive h2,.prh-question h2,.prh-research h2,.prh-map h2,.prh-feedback h2,.prh-next h2),
+body.verde-case :is(.ver-headline,.ver-research h2,.ver-journey-title h2,.ver-real-work h2,.ver-return h2) {
+  font-family:var(--portfolio-display)!important;
+  font-weight:700!important;
+  letter-spacing:-.025em!important;
+  line-height:1.1!important;
+}
+body.production-editorial .prod-hero h1 {font-size:clamp(58px,8.1vw,124px)}
+body.prh-editorial .prh-headline {font-size:clamp(55px,8.2vw,134px);overflow-wrap:normal}
+body.verde-case .ver-headline {font-size:clamp(80px,11vw,168px)}
+body.prh-editorial :is(.prh-hero-paper strong,.prh-reflection h3),
+body.verde-case :is(.ver-next-card h3) {
+  font-family:var(--portfolio-secondary)!important;
+}
+/* Common soft corners, rather than square UI templates. Preserve originals. */
+body.production-editorial .prod-hero-frame {
+  border-radius:26px;
+  overflow:hidden;
+}
+body.production-editorial .prod-phase {
+  border-radius:24px;
+  overflow:hidden;
+}
+body.production-editorial .prod-gallery figure {
+  border-radius:24px;
+  overflow:hidden;
+}
+body.production-editorial .prod-gallery img {
+  height:auto;
+  max-height:none;
+  width:100%;
+  object-fit:contain;
+  display:block;
+}
+body.production-editorial .prod-gallery figure a {overflow:hidden}
+body.production-editorial .prod-gallery figcaption {gap:12px;flex-wrap:wrap}
+body.prh-editorial :is(.prh-hero-paper,.prh-number,.prh-pathway article,.prh-reflection,.prh-archive-grid figure) {
+  border-radius:24px;
+  overflow:hidden;
+}
+body.prh-editorial .prh-place-layout figure a {
+  border-radius:24px;
+  overflow:hidden;
+}
+body.prh-editorial .prh-archive-grid img {
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+body.prh-editorial .prh-flow span {border-radius:12px}
+body.prh-editorial .prh-meta {overflow:hidden}
+body.verde-case :is(.ver-metric,.ver-step,.ver-direction,.ver-image-frame,.ver-next-card) {
+  border-radius:24px;
+}
+body.verde-case .ver-wireframe {border-radius:17px;overflow:hidden}
+body.verde-case .ver-art-tag {border-radius:14px}
+body.verde-case .ver-image-frame {overflow:hidden}
+body.verde-case .ver-image-frame img,
+body.verde-case .ver-art-stage img {
+  object-fit:contain;
+  max-width:100%;
+}
+/* CTA shapes respect each project's existing accent colors. */
+body.production-editorial .ed-cta,
+body.prh-editorial .ed-cta,
+body.verde-case .ver-pill {border-radius:100px}
+body.production-editorial .prod-gallery figure:hover,
+body.prh-editorial .prh-archive-grid figure:hover {
+  box-shadow:0 8px 0 #20282012;
+}
+/* Shared dark footer, but each page keeps its own accent. */
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer {
+  background:#1c221e;
+  color:var(--portfolio-paper);
+  border-top:1px solid #667164;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer h2,
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer h2 .script {
+  font-family:var(--portfolio-display)!important;
+  font-weight:700!important;
+  letter-spacing:-.02em;
+  line-height:1.13;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer h2 .script {color:var(--case-accent)}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer .eyebrow {color:var(--case-accent)}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer p {color:#dce5da}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer .button-pink {
+  background:var(--case-accent);
+  color:var(--portfolio-ink);
+  border-radius:100px;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer-bottom {
+  color:#d1ddcf;
+  border-top-color:#697566;
+}
+:is(body.production-editorial,body.prh-editorial,body.verde-case) .footer-bottom a:hover {color:var(--case-accent)}
+@media(max-width:700px) {
+  :is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links {
+    background:var(--portfolio-ink);
+    border-bottom:1px solid #667164;
+    box-shadow:0 16px 26px #151a16aa;
+    padding:22px max(18px,6vw) 26px;
+    gap:19px;
+  }
+  :is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links:not(.is-open) {display:none}
+  :is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links.is-open {display:flex}
+  :is(body.production-editorial,body.prh-editorial,body.verde-case) .site-header .nav-links .nav-contact {color:var(--portfolio-ink)}
+  body.production-editorial .prod-hero h1 {font-size:clamp(55px,12vw,90px)}
+  body.prh-editorial .prh-headline {font-size:clamp(52px,11vw,90px)}
+  body.verde-case .ver-headline {font-size:clamp(70px,16vw,112px)}
+  body.production-editorial .prod-gallery figure,
+  body.prh-editorial .prh-archive-grid figure,
+  body.verde-case .ver-image-frame {border-radius:20px}
+  body.production-editorial .prod-hero-frame,
+  body.prh-editorial .prh-hero-paper {border-radius:22px}
+}
+@media(prefers-reduced-motion:reduce) {
+  body.production-editorial .prod-gallery figure,
+  body.prh-editorial .prh-archive-grid figure {transition:none}
+}
