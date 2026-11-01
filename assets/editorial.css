@@ -302,3 +302,16 @@
  .prh-visual-archive{padding:75px 0}
  .prh-archive-grid figcaption{flex-wrap:wrap}
 }
+
+/* Attributed historical photography of Project Row Houses, separate from project design work. */
+.prh-place-photo{background:#302831;color:#fff;padding:clamp(70px,8vw,120px) 0}
+.prh-place-layout{display:grid;grid-template-columns:.75fr 1.25fr;align-items:center;gap:55px}
+.prh-place-layout h2{font-size:clamp(49px,6vw,85px);margin:20px 0 28px}
+.prh-place-layout p{font-size:16px;line-height:1.85;color:#e6dee3;max-width:480px}
+.prh-place-layout .prh-photo-credit{margin-top:29px;font-size:11px;line-height:1.75;color:#c6b8c7}
+.prh-photo-credit a{text-decoration:underline;text-underline-offset:3px}
+.prh-place-layout figure{margin:0;min-width:0}
+.prh-place-layout figure a{display:block;background:#5f4c55;position:relative}
+.prh-place-layout figure img{width:100%;height:auto;display:block;min-height:220px;object-fit:cover}
+.prh-place-layout figure span{display:block;background:#f3e9db;color:#342730;font-size:10px;font-weight:800;letter-spacing:.11em;padding:12px 16px}
+@media(max-width:700px){.prh-place-layout{grid-template-columns:1fr;gap:29px}}
