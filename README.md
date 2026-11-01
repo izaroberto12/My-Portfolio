@@ -1,34 +1,19 @@
-# Roberto Izaguirre — Portfolio redesign
+# Roberto Izaguirre: Portfolio
 
-This standalone, responsive portfolio is built with **HTML, CSS, and JavaScript**. Its design uses pastel blue as the primary color, pink as the secondary accent, lavender as the tertiary accent, and Lobster for expressive headlines.
+Live website: https://izaroberto12.github.io/My-Portfolio/
+Publishing branch: `portfolio-redesign-2026` (the original `master` branch stays untouched).
 
-## Contents
-- `index.html` — homepage, selected projects, skills, about, contact
-- `work/project-row-houses.html` — nonprofit website UX case study
-- `work/verde.html` — vegetarian restaurant discovery app UX case study
-- `work/nasa.html` — independent mobile UX redesign case study
-- `assets/style.css` — responsive design system and project visuals
-- `assets/script.js` — accessible mobile navigation
-- `assets/verde-mobile.png` — the original Verde mobile image, reused from the archived portfolio
+Built as a static website with HTML, CSS and JavaScript, with AI assistance. Roberto directed the design, content and publishing process. It runs on GitHub Pages.
 
-## Local preview
-Open `index.html` or serve the folder locally using `python -m http.server 8000`.
+## Files
+- `index.html`: home, projects, skills, About, contact
+- `work/portfolio-build.html`: front-end build case study, scope and AI-assistance disclosure
+- `work/project-row-houses.html`, `work/verde.html`, `work/nasa.html`: original UX/UI case studies, linked to Webflow archives for deeper evidence
+- `assets/style.css`: responsive CSS
+- `assets/script.js`: mobile navigation with Escape and resize handling
+- `assets/verde-mobile.png`: the only preserved original project image used by the new site
 
-## Publish with GitHub Pages (after reviewing)
-Because the repository's default branch is `master`, publish only **after** choosing how to merge this redesign into the default branch. In Settings → Pages, choose **Deploy from a branch** and then select the branch/folder supported by the repository. You can test the redesign from this branch before switching the public site. GitHub Pages needs a public repository on the free plan.
+## Notes
+The NASA UX/UI redesign was a team project, not a solo redesign. Source material contains contradictory NASA survey totals, so we don't repeat them here. The design work is not described as full-stack production software.
 
-## Content checks before publishing
-- Verify email address and professional details.
-- Add a current resume link only when available.
-- Review each case study against the original source material and confirm team roles and research numbers.
-- Replace conceptual CSS illustrations for Project Row Houses and NASA if authentic project screenshots become available.
-- Verde uses only its original mobile image. No other original portfolio photos are reused.
-- Test all links and the mobile navigation.
-
-## Integrity
-The project writeups describe UX/UI research and concept work, **not** shipped full-stack applications. The portfolio itself demonstrates hands-on front-end code.
-
-Original archived website: https://roberto-izaguirre-portfolio.webflow.io/
-LinkedIn: https://www.linkedin.com/in/roberto-izaguirre/
-
-Portfolio publishing test
+A current resume link, employer names, job titles and academic details are not yet verified and should be added only when confirmed. Test all navigation and contact links before interview use.

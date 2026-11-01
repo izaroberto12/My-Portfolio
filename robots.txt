@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://izaroberto12.github.io/My-Portfolio/sitemap.xml

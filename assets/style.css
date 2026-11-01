@@ -84,3 +84,9 @@ body{color:var(--ink);background:#f6f8fc}
 .next-section{color:#fff;background:linear-gradient(115deg,#223e84,#3b267a)}
 .next-section .eyebrow{color:#c8d5ff}
 @media(max-width:700px){.nav-links{background:#fff;border-bottom:1px solid #dce3ed}}
+
+/* Code-built project card; minimal additions to the existing layout */
+.visual-dev{background:linear-gradient(145deg,#152c59,#314fa6);padding:23px}
+.dev-code{width:min(92%,340px);background:#09172e;color:#b9d6fd;border:1px solid #6c7fb0;border-radius:13px;padding:20px;box-shadow:0 14px 30px #08132f65;display:flex;flex-direction:column;gap:7px;transform:rotate(-2deg);font:600 12px/1.45 ui-monospace,SFMono-Regular,Consolas,monospace}
+.dev-code small{font-size:10px;color:#a8b7d4;border-bottom:1px solid #53637d;padding-bottom:12px;margin-bottom:5px;overflow-wrap:anywhere}.dev-code strong{color:#c4b3fa}.dev-code span{color:#8ec6ff}
+@media(max-width:700px){.dev-code{transform:none}}
