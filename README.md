@@ -9,7 +9,7 @@ Built as a static website with HTML, CSS and JavaScript, with AI assistance. Rob
 - `index.html`: home, projects, skills, About, contact
 - `work/portfolio-build.html`: front-end build case study, scope and AI-assistance disclosure
 - `work/project-row-houses.html` and `work/verde.html`: UX/UI case studies with archive links
-- `work/graphic-design.html`: ambulance graphics production portfolio with seven sanitized professional photographs
+- `work/graphic-design.html`: Graphic Production professional work showcase with seven optimized photographs of finished vehicle graphics and production processes
 - `work/nasa.html`: preserved archived UX case study; no longer linked from the homepage
 - `assets/style.css`: responsive CSS
 - `assets/script.js`: mobile navigation with Escape and resize handling
