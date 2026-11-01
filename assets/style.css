@@ -5,3 +5,82 @@
 @media(max-width:700px){.container{width:min(100% - 34px,530px)}.nav{height:68px}.logo{font-size:31px}.menu-button{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 6%;background:#f0eaff;box-shadow:0 13px 22px #2a3b5d24;align-items:flex-start;flex-direction:column;gap:19px}.nav-links.is-open{display:flex}.nav-contact{display:inline-block}.hero{padding:60px 0 65px}.hero-grid,.case-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(45px,10.5vw,64px)}.hero-showcase{min-height:335px}.code-card{width:90%}.sticker{bottom:-1px}.section{padding:67px 0}.section-heading{display:block}.section-heading p{margin-top:12px}.project-grid,.skill-grid,.about-grid{grid-template-columns:1fr}.project-card.featured{grid-column:auto;display:flex}.featured .visual{min-height:240px}.project-info{padding:23px}.about-mark{display:none}.footer-main,.footer-bottom,.next-inner{display:block}.footer-main .button,.next-inner .button{margin-top:25px}.footer-bottom div{margin-top:15px}.footer-bottom{margin-top:45px}.breadcrumbs{padding-top:19px}.case-hero{padding:36px 0 58px}.case-hero h1{font-size:clamp(44px,10vw,61px)}.case-hero .visual{min-height:285px}.case-meta{gap:7px}.case-meta div{padding:9px}.case-meta span{font-size:10px}.case-layout{grid-template-columns:1fr}.case-nav{position:static;flex-direction:row;flex-wrap:wrap;gap:13px}.case-nav .eyebrow{width:100%}.case-block{padding-bottom:35px;margin-bottom:35px}}
 @media(max-width:360px){.case-meta{grid-template-columns:1fr}.hero h1{font-size:42px}.code-content{padding:22px 20px}.code-content h2{font-size:28px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* =====================================================
+   Portfolio color system: Deep Navy / Cobalt / Violet
+   Keeps the existing HTML, typography and responsive layout.
+   ===================================================== */
+:root{--ink:#182945;--deep:#0c1731;--blue:#2563eb;--pink:#7545d8;--lilac:#a995fb;--muted:#55667d;--line:#d7dfeb}
+body{color:var(--ink);background:#f6f8fc}
+.site-header{background:#fffffff0;border-bottom-color:#dce3ed}
+.logo span{color:#7545d8}
+.nav-contact{background:#7545d8;border-color:#7545d8;color:#fff}
+.nav-contact:hover{background:#6333c6;color:#fff}
+.menu-button{background:#f6f8fd;border-color:#d8e0ef}
+.nav-links{background:#fff}
+.button-dark{background:#2563eb;color:#fff}
+.button-dark:hover{background:#174ec4;color:#fff}
+.button-outline{background:#fff;border-color:#b9c5db}
+.button-outline:hover{background:#ecf1fa}
+.button-pink{background:#7545d8;color:#fff}
+.button-pink:hover{background:#966aee;color:#fff}
+.status-dot{background:#9d81fc;box-shadow:0 0 0 4px #7450d649}
+.hero{color:#fff;background:radial-gradient(ellipse at 83% 18%,#7649d85c,transparent 47%),radial-gradient(ellipse at 5% 93%,#2563eb59,transparent 53%),linear-gradient(120deg,#08172f,#122b57 59%,#211c50)}
+.hero .eyebrow,.case-hero .eyebrow{color:#c3d6ff}
+.hero .intro,.case-hero .intro{color:#d9e4f6}
+.hero h1 .script{color:#b1a3ff}
+.hero .button-outline,.case-hero .button-outline{background:transparent;color:#fff;border-color:#a7bce4}
+.hero .button-outline:hover,.case-hero .button-outline:hover{background:#ffffff1e}
+.tags span{background:#ffffff13;border-color:#ffffff37;color:#e7eefc}
+.tags span:nth-child(2){background:#7446dc40}
+.tags span:nth-child(4){background:#375bdc40}
+.back-blob{background:linear-gradient(150deg,#527de355,#854ce877)}
+.code-card{background:#071227;border-color:#4a6aa1;box-shadow:0 25px 50px #03081777}
+.code-top{border-bottom-color:#425b82;color:#c6d7f1}
+.code-top i{background:#9b75f4}
+.code-top i:nth-child(2){background:#4980fa}
+.code-top i:nth-child(3){background:#a6b5d8}
+.code-content h2 em{color:#b5a2ff}
+.code-lines b{color:#b3a4ff}
+.code-lines div:nth-child(2) b{color:#7ec0ff}
+.code-lines div:nth-child(3) b{color:#c0afff}
+.sticker{background:#7545d8;color:#fff;box-shadow:0 9px 24px #060f2733}
+.work-section{background:linear-gradient(135deg,#f8fafd,#eef2f8)}
+.project-card{background:#fff;border-color:#dce3ee;box-shadow:0 13px 35px #142d5419}
+.project-card:hover{box-shadow:0 19px 42px #142d5429}
+.visual-prh{background:linear-gradient(145deg,#1a4fa9,#6b9de8)}
+.visual-verde{background:linear-gradient(135deg,#322169,#7545d8)}
+.orb-pink{background:#a48ef05c}
+.project-info .eyebrow{color:#6255a5}
+.card-bottom>span{color:#7545d8}
+.text-link{color:#2b59be}
+.strengths-section{background:linear-gradient(120deg,#e9eef6,#f0f3f8)}
+.skill-grid article{background:#fff;border-color:#dce3ee;box-shadow:0 12px 22px #213b5817}
+.skill-icon{background:#2563eb;color:#fff}
+.skill-icon.pink{background:#7545d8;color:#fff}
+.skill-icon.lavender{background:#4754a2;color:#fff}
+.source-note a{color:#2957b5}
+.about-section{color:#fff;background:radial-gradient(ellipse at 89% 11%,#794fce47,transparent 50%),linear-gradient(125deg,#102344,#141b3a)}
+.about-section .eyebrow{color:#b9cdf2}
+.about-section .text-link{color:#b8a5ff}
+.about-mark{background:linear-gradient(145deg,#2f6df3,#7847dc);color:#fff;box-shadow:0 13px 25px #060d214d}
+.about-mark span{color:#d2c2ff}
+.about-text p{color:#d7e1f4}
+.footer{background:#080f24;color:#fff}
+.footer h2 .script{color:#b5a2ff}
+.footer-bottom{border-top-color:#39496b;color:#b8c9df}
+.case-hero{color:#fff;background:radial-gradient(ellipse at 86% 13%,#7545d84c,transparent 47%),linear-gradient(120deg,#0c1a36,#1d2855)}
+.case-hero h1 .script{color:#b4a1ff}
+.case-meta div{background:#ffffff13;border-color:#ffffff34}
+.case-meta b{color:#e7eefe}
+.case-meta span{color:#c9d7ee}
+.case-content{background:linear-gradient(120deg,#f8fafd,#eef2f8)}
+.case-block p.big-quote{color:#233c67}
+.stats div{background:#fff;border-color:#dce3ee}
+.stats strong{color:#2b61d3}
+.step{background:#fff;border-color:#dde4ee}
+.step>span{background:#7545d8;color:#fff}
+.case-honesty{border-left-color:#7545d8;background:#ece7f8;color:#344768}
+.next-section{color:#fff;background:linear-gradient(115deg,#223e84,#3b267a)}
+.next-section .eyebrow{color:#c8d5ff}
+@media(max-width:700px){.nav-links{background:#fff;border-bottom:1px solid #dce3ed}}
