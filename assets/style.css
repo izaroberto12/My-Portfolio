@@ -124,3 +124,9 @@ body{color:var(--ink);background:#f6f8fc}
 .graphics-image-link:hover .graphics-photo{transform:scale(1.025)}
 .graphics-image-link:focus-visible{outline:3px solid #7545d8;outline-offset:-3px}
 @media(max-width:600px){.graphics-photo{height:200px}}
+
+/* Full-frame artwork: show the complete Baytown, Val Verde and Caldwell photos without card cropping. */
+.graphics-photo{height:auto;aspect-ratio:auto;object-fit:contain;object-position:center;background:#e6eaf2}
+.graphics-image-link{display:block;background:#e6eaf2}
+.graphics-image-link:hover .graphics-photo{transform:none}
+@media(max-width:600px){.graphics-photo{height:auto}}
