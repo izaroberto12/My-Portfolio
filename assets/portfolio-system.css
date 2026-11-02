@@ -284,3 +284,10 @@ body.verde-case .ver-margin-heading {color:#356546}
   body.prh-editorial .prh-place-layout figure img {width:100%;max-width:100%;height:auto}
   body.prh-editorial .prh-place-layout p {overflow-wrap:anywhere}
 }
+
+/* The remaining 50px reported at 280/320 is off-canvas decoration,
+   with no visible DOM element outside the viewport after grid repair. */
+@media(max-width:370px) {
+  body.prh-editorial {overflow-x:clip}
+  body.prh-editorial main {max-width:100%;overflow-x:clip}
+}
