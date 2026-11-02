@@ -1,21 +1,46 @@
-# Roberto Izaguirre: Portfolio
+# Roberto Izaguirre · Design Portfolio
 
-Live website: https://izaroberto12.github.io/My-Portfolio/
-Publishing branch: `portfolio-redesign-2026` (the original `master` branch stays untouched).
+Live site: https://izaroberto12.github.io/My-Portfolio/
 
-Built as a static website with HTML, CSS and JavaScript, with AI assistance. Roberto directed the design, content and publishing process. It runs on GitHub Pages.
+Publishing and working branch: `portfolio-redesign-2026`. **Do not edit `master`**.
 
-## Files
-- `index.html`: home, project showcase, professional experience, software & equipment, About, contact
-- `work/portfolio-build.html`: preserved, unfeatured documentation of the AI-assisted website build
-- `work/project-row-houses.html` and `work/verde.html`: UX/UI case studies with archive links
-- `work/graphic-design.html`: Graphic Production professional work showcase with seven optimized photographs of finished vehicle graphics and production processes
-- `work/nasa.html`: preserved archived UX case study; no longer linked from the homepage
-- `assets/style.css`: responsive CSS
-- `assets/script.js`: mobile navigation with Escape and resize handling
-- `assets/verde-mobile.png`: the only preserved original project image used by the new site
+A static personal portfolio built with HTML, CSS and JavaScript and hosted on GitHub Pages. Design decisions, content and publishing are directed by Roberto, with AI-assisted development.
 
-## Notes
-The NASA UX/UI redesign was a team project, not a solo redesign. Source material contains contradictory NASA survey totals, so we don't repeat them here. The design work is not described as full-stack production software.
+## Featured pages
 
-Broad title: Designer. Verified tools: Adobe Creative Cloud, Google Workspace / G Suite, Microsoft 365 / Office Suite, Webflow, ChatGPT, Epson and Summa equipment. Learning HTML, CSS and jQuery. Professional experience and skills are aligned with Roberto_Izaguirre_Designer_Resume_Balanced.docx, supplied November 2026. Current role: Graphic Production Specialist at Frazer (January 2026–present); prior role: Documentation Clerk at Frazer (August 2024–January 2026). Earlier roles appear in an expandable section. Do not invent any additional duties or education. Test all navigation and contact links before interview use.
+- `index.html` — Home, three featured projects, experience, tools, about and contact.
+- `work/graphic-design.html` — Professional Graphic Production at Frazer. Artwork is team-developed and client-reviewed; Roberto's main role is production, with design and installation contributions.
+- `work/project-row-houses.html` — Three-person collaborative nonprofit UX/UI concept, with original portfolio artifacts.
+- `work/verde.html` — Two-person restaurant-discovery UX/UI concept, with original archived artwork. Not a live app.
+
+Archived, not featured: `work/nasa.html` and `work/portfolio-build.html`. Both should stay out of the public sitemap.
+
+## Design system
+
+- `assets/style.css`: shared legacy base styles.
+- `assets/editorial.css`: production and Project Row Houses editorial structure.
+- `assets/home.css`: home-specific layout and dark/paper screenprint palette.
+- `assets/verde.css`: Verde's original green visual identity.
+- `assets/portfolio-system.css`: shared Superpop typography, navigation, rounded cards, case-study treatment.
+- Adobe Fonts kit: `https://use.typekit.net/qjr3tcz.css`.
+- `assets/script.js`: accessible mobile navigation, Escape key and resize behavior.
+- `assets/photo-upgrades.js`: safe optional image loading, hiding incomplete photo sections until assets exist.
+
+## Image integrity
+
+Vehicle photography documents real work, not solely authored design. Website and app screenshots should be contained with original proportions. Any added photography must use accurate alt text and captions; no fabricated client claims.
+
+The following optional production images are prepared but **not yet in the repository**:
+
+- `assets/ambulance/schertz-ems.jpg` — homepage only
+- `assets/ambulance/fayette-county-ems.jpg` — case-study vehicle
+- `assets/ambulance/texas-am-ems.jpg` — case-study vehicle
+- `assets/ambulance/jackson-county-print.jpg` — production workflow
+
+## Responsive QA
+
+`.github/workflows/responsive-audit.yml` runs Playwright + axe-core against four active pages at 24 viewports from 280 to 3440 CSS pixels. It checks horizontal overflow, mobile-menu open/Escape behavior, script errors, broken visible images and WCAG A/AA violations, and uploads screenshots + JSON results as an Actions artifact. It does not replace manual visual and usability review.
+
+## Verification
+
+Check the publishing branch, [GitHub Actions](https://github.com/izaroberto12/My-Portfolio/actions), and rendered desktop/mobile pages before interview use. Avoid changes to `master`.
