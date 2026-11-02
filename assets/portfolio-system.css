@@ -273,3 +273,14 @@ body.prh-editorial .prh-archive-grid figure:hover {
 /* Axe WCAG AA: contrast corrections measured in headless Chromium. */
 body.prh-editorial .prh-pathway .ed-kicker {color:#80343f}
 body.verde-case .ver-margin-heading {color:#356546}
+
+/* Browser-verified 280/320px fix: the historic place-photo grid's intrinsic
+   minimum width was 330px. Allow both columns and media to shrink. */
+@media(max-width:700px){
+  body.prh-editorial .prh-place-layout {display:grid;grid-template-columns:minmax(0,1fr)}
+  body.prh-editorial .prh-place-layout > *,
+  body.prh-editorial .prh-place-layout figure,
+  body.prh-editorial .prh-place-layout figure a {min-width:0;max-width:100%}
+  body.prh-editorial .prh-place-layout figure img {width:100%;max-width:100%;height:auto}
+  body.prh-editorial .prh-place-layout p {overflow-wrap:anywhere}
+}
