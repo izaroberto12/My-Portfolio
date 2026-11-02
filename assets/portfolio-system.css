@@ -261,3 +261,11 @@ body.prh-editorial .prh-archive-grid figure:hover {
 /* Preserve the hidden attribute until actual new photo files load. */
 .production-editorial [data-photo-panel][hidden],
 .production-editorial [data-photo-gallery][hidden] {display:none!important}
+
+/* Verified 280/320px overflow: allow the long Row Houses heading to wrap. */
+@media(max-width:370px){
+  body.prh-editorial .prh-headline {font-size:clamp(37px,10.6vw,43px);max-width:100%;overflow-wrap:anywhere;word-break:normal;letter-spacing:-.03em!important}
+  body.prh-editorial .prh-headline span {max-width:100%}
+  body.prh-editorial .prh-topline {flex-wrap:wrap}
+  body.prh-editorial .prh-hero-paper {margin-inline:0;padding:clamp(14px,5vw,25px)}
+}
