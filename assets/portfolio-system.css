@@ -269,3 +269,7 @@ body.prh-editorial .prh-archive-grid figure:hover {
   body.prh-editorial .prh-topline {flex-wrap:wrap}
   body.prh-editorial .prh-hero-paper {margin-inline:0;padding:clamp(14px,5vw,25px)}
 }
+
+/* Axe WCAG AA: contrast corrections measured in headless Chromium. */
+body.prh-editorial .prh-pathway .ed-kicker {color:#80343f}
+body.verde-case .ver-margin-heading {color:#356546}
