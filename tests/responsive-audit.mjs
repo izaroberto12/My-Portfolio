@@ -81,7 +81,7 @@ for (const item of cases) {
   const maxOverflow=Math.max(...rows.map(x=>x.overflow));
   const bad=rows.filter(x=>x.overflow>2);
   const broken=[...new Set(rows.flatMap(x=>x.brokenImages))];
-  summary.push({page:item.name,maxOverflow,badWidths:bad.map(x=>x.width),brokenImages:broken,jsErrors:[...new Set(errors)],axe:rows.filter(x=>x.axe?.length).map(x=>({width:x.width,issues:x.axe})),mobileMenu:rows.filter(x=>x.mobileMenuOpened!==undefined).map(x=>({width:x.width,opened:x.mobileMenuOpened,closed:x.mobileMenuClosed}))});
+  summary.push({page:item.name,maxOverflow,badWidths:bad.map(x=>x.width),badDetails:bad.map(x=>({width:x.width,offenders:x.offenders})),brokenImages:broken,jsErrors:[...new Set(errors)],axe:rows.filter(x=>x.axe?.length).map(x=>({width:x.width,issues:x.axe})),mobileMenu:rows.filter(x=>x.mobileMenuOpened!==undefined).map(x=>({width:x.width,opened:x.mobileMenuOpened,closed:x.mobileMenuClosed}))});
   await page.close();
 }
 await browser.close();
