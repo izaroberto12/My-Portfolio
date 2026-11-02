@@ -241,3 +241,19 @@ body.prh-editorial .prh-archive-grid figure:hover {
 .verde-case .ver-archive-brand img{max-height:150px}
 .verde-case .ver-archive-footnote{font-size:12px;color:#44534b;margin-top:20px;line-height:1.7}
 @media(max-width:760px){.verde-case .ver-archive-intro,.verde-case .ver-archive-gallery{grid-template-columns:1fr}.verde-case .ver-archive-feature{grid-row:auto}.verde-case .ver-archive-art>a{min-height:180px}}
+
+/* Original production photographs; only displayed once the referenced files load. */
+.production-editorial .prod-new-work {background:#f0e8d8;padding:clamp(72px,8vw,115px) 0;color:#252925}
+.production-editorial .prod-new-work .prod-gallery-head p {color:#435149}
+.production-editorial .prod-new-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.production-editorial .prod-new-grid figure {min-width:0;margin:0;background:#fffaf0;border:1px solid #cbc5bb;border-radius:26px;overflow:hidden}
+.production-editorial .prod-new-grid figure:first-child {grid-column:span 2}
+.production-editorial .prod-new-grid img {display:block;width:100%;height:auto;object-fit:contain}
+.production-editorial .prod-new-grid figcaption,.production-editorial .prod-print-detail figcaption {font:800 11px/1.5 "Space Grotesk",sans-serif;letter-spacing:.08em;padding:15px 19px}
+.production-editorial .prod-print-detail {background:#dcdff0;padding:clamp(70px,8vw,110px) 0}
+.production-editorial .prod-print-detail-inner {display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(25px,5vw,65px);align-items:center}
+.production-editorial .prod-print-detail h2 {font-family:var(--portfolio-display);font-size:clamp(49px,6vw,88px);line-height:1.08;margin:15px 0 28px}
+.production-editorial .prod-print-detail p {font-size:16px;line-height:1.8}
+.production-editorial .prod-print-detail figure {margin:0;min-width:0;background:#fff;border:1px solid #b7bdd7;border-radius:26px;overflow:hidden}
+.production-editorial .prod-print-detail img {display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:700px){.production-editorial .prod-new-grid,.production-editorial .prod-print-detail-inner {grid-template-columns:1fr}.production-editorial .prod-new-grid figure:first-child {grid-column:auto}.production-editorial .prod-new-grid figure,.production-editorial .prod-print-detail figure {border-radius:21px}}
