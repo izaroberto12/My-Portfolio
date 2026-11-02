@@ -65,7 +65,7 @@ for (const item of cases) {
     }
     if ([320,390,768,1440].includes(width)) {
       await page.addScriptTag({path:axe});
-      const a11y=await page.evaluate(async()=>{const r=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}});return r.violations.map(x=>({id:x.id,impact:x.impact,count:x.nodes.length,description:x.help}))});
+      const a11y=await page.evaluate(async()=>{const r=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}});return r.violations.map(x=>({id:x.id,impact:x.impact,count:x.nodes.length,description:x.help,nodes:x.nodes.slice(0,4).map(n=>({target:n.target,html:n.html.slice(0,180),summary:n.failureSummary?.slice(0,250)}))}))});
       entry.axe=a11y;
       if (width<701) {
         const button=page.locator('[data-menu]');
