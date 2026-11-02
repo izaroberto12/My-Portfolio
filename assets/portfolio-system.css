@@ -94,11 +94,11 @@ body.production-editorial .prod-gallery figure {
   overflow:hidden;
 }
 body.production-editorial .prod-gallery img {
-  height:auto;
-  max-height:none;
-  width:100%;
-  object-fit:contain;
   display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
 }
 body.production-editorial .prod-gallery figure a {overflow:hidden}
 body.production-editorial .prod-gallery figcaption {gap:12px;flex-wrap:wrap}
@@ -290,4 +290,29 @@ body.verde-case .ver-margin-heading {color:#356546}
 @media(max-width:370px) {
   body.prh-editorial {overflow-x:clip}
   body.prh-editorial main {max-width:100%;overflow-x:clip}
+}
+
+/* Finished vehicles: consistent visual frames with natural full-size originals on click. */
+body.production-editorial .prod-gallery figure {display:flex;flex-direction:column;min-width:0}
+body.production-editorial .prod-gallery figure > a {aspect-ratio:16/10;display:block;flex-shrink:0}
+body.production-editorial .prod-gallery figure > a img {width:100%;height:100%;object-fit:cover;object-position:center}
+body.production-editorial .prod-gallery figcaption {margin-top:auto;min-height:65px;display:flex;align-items:center}
+body.production-editorial .prod-gallery figure:nth-child(3) img {object-position:center 38%}
+/* Workflow photos are more technical, so retain a little extra context. */
+body.production-editorial .prod-process-photos .prod-gallery figure > a {aspect-ratio:4/3}
+body.production-editorial .prod-process-photos .prod-gallery img {object-position:center}
+/* Upcoming vehicle shots follow the same card system when files become available. */
+body.production-editorial .prod-new-grid figure:first-child {grid-column:auto}
+body.production-editorial .prod-new-grid figure {display:flex;flex-direction:column}
+body.production-editorial .prod-new-grid img {aspect-ratio:16/10;object-fit:cover;object-position:center}
+body.production-editorial .prod-new-grid figcaption {min-height:60px;margin-top:auto}
+@media(max-width:850px) and (min-width:701px){
+ body.production-editorial .prod-process-photos .prod-gallery {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+ body.production-editorial .prod-gallery {grid-template-columns:1fr}
+ body.production-editorial .prod-process-photos .prod-gallery {grid-template-columns:1fr}
+ body.production-editorial .prod-new-grid {grid-template-columns:1fr}
+ body.production-editorial .prod-gallery figure > a {aspect-ratio:16/10}
+ body.production-editorial .prod-process-photos .prod-gallery figure > a {aspect-ratio:4/3}
 }
