@@ -1,0 +1,37 @@
+name: Responsive portfolio audit
+on:
+  push:
+    branches: [portfolio-redesign-2026]
+    paths:
+      - 'index.html'
+      - 'work/**'
+      - 'assets/**'
+      - 'tests/**'
+      - '.github/workflows/responsive-audit.yml'
+  workflow_dispatch:
+jobs:
+  responsive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test tools
+        run: |
+          npm install --no-save playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Serve website
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/portfolio-server.log 2>&1 &
+          sleep 2
+      - name: Test 24 viewport sizes across four active pages
+        run: node tests/responsive-audit.mjs
+      - name: Save screenshots and audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-audit
+          path: artifacts/responsive-audit/
+          retention-days: 7
