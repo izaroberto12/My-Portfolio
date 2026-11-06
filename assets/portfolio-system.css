@@ -316,3 +316,8 @@ body.production-editorial .prod-new-grid figcaption {min-height:60px;margin-top:
  body.production-editorial .prod-gallery figure > a {aspect-ratio:16/10}
  body.production-editorial .prod-process-photos .prod-gallery figure > a {aspect-ratio:4/3}
 }
+/* Keep the longest production-workflow heading readable on 280–320px screens
+   without clipping content or shrinking case-study typography on desktop. */
+@media(max-width:420px){
+  body.production-editorial .prod-process h2 {font-size:clamp(38px,12vw,50px)}
+}
