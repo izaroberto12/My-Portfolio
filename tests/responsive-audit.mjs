@@ -48,7 +48,29 @@ for (const item of cases) {
         const r=el.getBoundingClientRect();
         return r.right>vw+3&&r.width>3&&getComputedStyle(el).position!=='fixed';
       }).slice(0,7).map(el=>({tag:el.tagName.toLowerCase(),className:typeof el.className==='string'?el.className.slice(0,85):'',right:Math.round(el.getBoundingClientRect().right)}));
+      // Text can overflow inside an otherwise in-bounds element. The element
+      // rectangle alone will not identify an unbreakable word.
+      const textOffenders = [];
+      if (doc.scrollWidth > vw + 2) {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        while (walker.nextNode() && textOffenders.length < 8) {
+          const node = walker.currentNode, el = node.parentElement;
+          if (!node.textContent.trim() || !el || !isVisible(el)) continue;
+          const range = document.createRange();
+          range.selectNodeContents(node);
+          const rects = [...range.getClientRects()];
+          if (rects.some(r => r.right > vw + 3)) {
+            textOffenders.push({
+              text:node.textContent.trim().slice(0,80),
+              tag:el.tagName.toLowerCase(),
+              className:typeof el.className==='string'?el.className.slice(0,85):'',
+              right:Math.round(Math.max(...rects.map(r=>r.right)))
+            });
+          }
+        }
+      }
       return {
+        textOffenders,
         documentWidth:doc.scrollWidth,
         clientWidth:vw,
         overflow: Math.max(0,doc.scrollWidth-vw),
@@ -78,10 +100,31 @@ for (const item of cases) {
       }
     }
   }
+  // Probe real src attributes separately so lazy-loaded images are checked
+  // even if they never scrolled into the viewport. Optional data-photo-src
+  // images are intentionally excluded until uploaded and activated.
+  const missingImages = await page.evaluate(async () => {
+    const urls = [...new Set([...document.querySelectorAll('img[src]')].map(im=>im.src))];
+    const results = await Promise.all(urls.map(url=>new Promise(resolve=>{
+      const probe = new Image();
+      let settled = false;
+      const finish = broken => {
+        if (settled) return;
+        settled = true;
+        resolve(broken ? url : null);
+      };
+      probe.onload = () => finish(false);
+      probe.onerror = () => finish(true);
+      probe.src = url;
+      if (probe.complete) finish(probe.naturalWidth===0);
+      setTimeout(()=>finish(true),8000);
+    })));
+    return results.filter(Boolean);
+  });
   const maxOverflow=Math.max(...rows.map(x=>x.overflow));
   const bad=rows.filter(x=>x.overflow>2);
-  const broken=[...new Set(rows.flatMap(x=>x.brokenImages))];
-  summary.push({page:item.name,maxOverflow,badWidths:bad.map(x=>x.width),badDetails:bad.map(x=>({width:x.width,offenders:x.offenders})),brokenImages:broken,jsErrors:[...new Set(errors)],axe:rows.filter(x=>x.axe?.length).map(x=>({width:x.width,issues:x.axe})),mobileMenu:rows.filter(x=>x.mobileMenuOpened!==undefined).map(x=>({width:x.width,opened:x.mobileMenuOpened,closed:x.mobileMenuClosed}))});
+  const broken=[...new Set([...rows.flatMap(x=>x.brokenImages),...missingImages])];
+  summary.push({page:item.name,maxOverflow,badWidths:bad.map(x=>x.width),badDetails:bad.map(x=>({width:x.width,offenders:x.offenders,textOffenders:x.textOffenders})),brokenImages:broken,jsErrors:[...new Set(errors)],axe:rows.filter(x=>x.axe?.length).map(x=>({width:x.width,issues:x.axe})),mobileMenu:rows.filter(x=>x.mobileMenuOpened!==undefined).map(x=>({width:x.width,opened:x.mobileMenuOpened,closed:x.mobileMenuClosed}))});
   await page.close();
 }
 await browser.close();
@@ -89,5 +132,5 @@ fs.writeFileSync(path.join(dir,'results.json'),JSON.stringify({viewports,cases:a
 console.log('RESPONSIVE_AUDIT_SUMMARY_START');
 console.log(JSON.stringify(summary,null,2));
 console.log('RESPONSIVE_AUDIT_SUMMARY_END');
-const hardFailure=summary.some(x=>x.maxOverflow>2||x.jsErrors.length||x.mobileMenu.some(m=>!m.opened||!m.closed));
-if(hardFailure){console.error('Responsive audit found overflow, JS, or mobile-menu failures.');process.exitCode=1;}
+const hardFailure=summary.some(x=>x.maxOverflow>2||x.brokenImages.length||x.jsErrors.length||x.axe.length||x.mobileMenu.some(m=>!m.opened||!m.closed));
+if(hardFailure){console.error('Responsive audit failed: overflow, broken image, JavaScript error, WCAG A/AA violation, or mobile navigation issue.');process.exitCode=1;}
